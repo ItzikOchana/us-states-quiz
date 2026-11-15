@@ -29,7 +29,7 @@ while score.score != TOTAL_STATES:
         prompt="What's another state's name? (type 'exit' to quit)",
     )
 
-    # Cancel returns None, 'exit' ends the game and saves the states still missing
+    # cancel gives None, so it ends the game the same way as typing exit
     if answer is None or answer.strip().lower() == "exit":
         missing_states = [state for state in data.state if state not in correct_guesses]
         pandas.DataFrame({"state": missing_states}).to_csv("states_to_learn.csv", index=False)
