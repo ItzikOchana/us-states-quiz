@@ -1,17 +1,17 @@
-from turtle import Turtle, Screen
+from turtle import Turtle
 
 FONT = ("Courier", 24, "normal")
+
 
 class Scoreboard(Turtle):
 
     def __init__(self):
         super().__init__()
         self.penup()
-
         self.score = 0
-        self.color("black")  # צבע הטקסט
-        self.hideturtle()  # מסתיר את הצב של Score
-        self.goto(0, 270)  # מיקום ראשוני לטקסט (לדוגמה, במרכז למעלה)
+        self.color("black")
+        self.hideturtle()
+        self.goto(0, 270)  # top center of the screen
         self.update_score_display()
 
     def update_score_display(self):
